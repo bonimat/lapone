@@ -18,7 +18,7 @@ si dovrebbe visualizzare il phpinfo del sistema.
 
 ## Servizi
 Il docker-compose è diviso in 3 oggetti: due servizi e un volume.
-Il primo servizio è **lapone** costruito sul container lapone7.4 e contiene Apache2 2.4 + php-fpm 7.4 a altri strumenti di sviluppo.
+Il primo servizio si chiama **lapone** (Linux-Apache2-Php7.4-1) costruito sul container lapone7.4 e contiene Apache2 2.4 + php-fpm 7.4 a altri strumenti di sviluppo.
 
 Il secondo servizio è chiamato **dblapone** ed è il container dblapone7.4 con Postgres 13.
 
