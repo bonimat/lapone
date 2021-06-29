@@ -117,7 +117,7 @@ Controllo dei log per il container
 ```
 docker-compose logs -f lapone
 ```
-Accesso al db
+Accesso al dbpsql
 ```
 docker-compose exec dblapone psql -U admin postgres
 ```
