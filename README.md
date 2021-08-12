@@ -74,7 +74,7 @@ es.:
 docker volume rm myapp_data_lapone
 ```
 ### Comunicazione dei servizi
-Il server web **lapone** puo' accedere al database **dblapone** utilizzando i seguenti parametri:
+Il server web **lapone** puo' accedere al database **dblapone** utilizzando i seguenti parametri di defualt:
 
 ```
 hostname: dblapone
@@ -82,7 +82,7 @@ port: 5432
 username: admin
 password: password
 ```
-Nel caso si siano configurati username e password diversi tramite file .env, è necessario utilizzare quelli. 
+I parametri possono essere cambiati specificando nel file .env i nuovi valori.  
 
 ### .Env
 
