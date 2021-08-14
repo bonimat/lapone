@@ -1,5 +1,5 @@
 # php-fpm and apache 2.4
-FROM webdevops/php-apache:7.4
+FROM webdevops/php-apache:8.0
 
 # xdebug
 RUN pecl install xdebug \
@@ -24,7 +24,7 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install zip intl pdo pdo_pgsql
 
 # phpunit
-RUN curl -L -o /usr/local/bin/phpunit https://phar.phpunit.de/phpunit-7.5.phar
+RUN curl -L -o /usr/local/bin/phpunit https://phar.phpunit.de/phpunit-9.5.phar
 RUN chmod +x /usr/local/bin/phpunit
 
 # composer

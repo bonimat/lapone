@@ -2,7 +2,7 @@ version: '3.2'
 services:
     lapone:
         build: .
-        container_name: ${PREFIX_CONTAINER-}lapone7.4
+        container_name: ${PREFIX_CONTAINER-}lapone-8.0
         working_dir: /app
         volumes:
             - ./:/app
@@ -12,7 +12,7 @@ services:
             - 'dblapone:database'
     dblapone:
         image: postgres:latest
-        container_name: ${PREFIX_CONTAINER-}pglapone7.4
+        container_name: ${PREFIX_CONTAINER-}pglapone-8.0
         ports:
             - '${DBPORT-5433}:5432'
         environment:
