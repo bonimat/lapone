@@ -18,9 +18,9 @@ si dovrebbe visualizzare il phpinfo del sistema.
 
 ## Servizi
 Il docker-compose è diviso in 3 oggetti: due servizi e un volume.
-Il primo servizio si chiama **lapone** (Linux-Apache2-Php7.4-1) costruito sul container lapone7.4 e contiene Apache2 2.4 + php-fpm 7.4 a altri strumenti di sviluppo.
+Il primo servizio si chiama **lapone** (Linux-Apache2-PHP8.0) costruito sul container lapone-8.0 e contiene Apache2 2.4 + php-fpm 8.0 a altri strumenti di sviluppo.
 
-Il secondo servizio è chiamato **dblapone** ed è il container dblapone7.4 con Postgres 13.
+Il secondo servizio è chiamato **dblapone** ed è il container dblapone-8.0 con Postgres 13.
 
 Il terzo elemento è un volume persistente interno chiamato **data_lapone** per mantenere i dati del database Postgres.
 
@@ -28,13 +28,13 @@ Nota: i comandi docker-compose richiamano i nomi dei servizi e non i nomi dei co
 
 
 ### PHP
-La versione del php-fpm è la 7.4, per l'uso di cakePHP 3 (https://github.com/webdevops 
+La versione del php-fpm è la 8.0, per l'uso di CakePHP 4 (https://github.com/webdevops 
 simile a quella usata su blog di CakeDC https://www.cakedc.com/rochamarcelo/2020/07/20/a-quick-cakephp-local-environment-with-docker).
 
 Nel container sono installati:
-- PHPUnit 7.5.20
-- Composer version 2.0.14
-- Xdebug Version	3.0.4 (ip host 172.18.0.1 porta 9004)
+- PHPUnit 8.0.9
+- Composer version 2.1.15
+- Xdebug Version 3.0.4 (ip host 172.18.0.1 porta 9004)
 
 Il codice php è trasferito dalla cartella del docker-compose sulla cartella di lapone **/app** che è vista dal serverweb come **DocumentRoot**.
 
@@ -141,7 +141,10 @@ alias lapp1-cake="docker-compose exec -u $(id -u ${USER}):$(id -g ${USER}) lapon
 
 ## Inizializzazione progetto cakephp
 
-Creare un progetto <progetto>
+Creare un progetto cms
 ```
 docker-compose exec -T lapone composer create-project --prefer-dist cakephp/app:^3.8 <progetto> 
 ``` 
+
+nel sito 
+localhost:8040/
