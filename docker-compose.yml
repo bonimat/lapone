@@ -8,6 +8,7 @@ services:
             - ./:/app
         ports:
             - '${WEBPORT-8040}:80'
+            - '${WEBPORT-8443}:443'
         links:
             - 'dblapone:database'
     dblapone:

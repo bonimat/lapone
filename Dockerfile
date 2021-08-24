@@ -16,12 +16,13 @@ RUN pecl install xdebug \
 # php library
 RUN apt-get update && apt-get install -y \
     git \
+    libapache2-mod-shib2 \
     libzip-dev \
     libpq-dev \
     zip \
     && rm -rf /var/lib/apt/lists/* \
     && a2enmod rewrite \
-    && docker-php-ext-install zip intl pdo pdo_pgsql
+    && docker-php-ext-install zip intl pdo pdo_pgsql 
 
 # phpunit
 RUN curl -L -o /usr/local/bin/phpunit https://phar.phpunit.de/phpunit-9.5.phar
