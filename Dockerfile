@@ -1,6 +1,8 @@
 # php-fpm and apache 2.4
 FROM webdevops/php-apache:8.0
 
+ENV WEB_DOCUMENT_ROOT='/application/app'
+
 # xdebug
 RUN pecl install xdebug \
     && docker-php-ext-enable xdebug \
