@@ -138,6 +138,12 @@ si potrebbe aggiungere anche
 alias lapp1-cake="docker-compose exec -u $(id -u ${USER}):$(id -g ${USER}) lapone bin/cake"
 
 ``` 
+```
+alias dphp="docker-compose exec -u $(id -u ${USER}):$(id -g ${USER}) lapone php"
+alias dcomposer="docker-compose exec -u $(id -u ${USER}):$(id -g ${USER}) lapone composer"
+alias dcake="docker-compose exec -u $(id -u ${USER}):$(id -g ${USER}) lapone bin/cake"
+
+```
 
 ## Inizializzazione progetto cakephp
 
