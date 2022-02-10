@@ -135,13 +135,13 @@ alias lapp1-composer="docker-compose exec -u $(id -u ${USER}):$(id -g ${USER}) l
 ```
 si potrebbe aggiungere anche 
 ```
-alias lapp1-cake="docker-compose exec -u $(id -u ${USER}):$(id -g ${USER}) lapone bin/cake"
+alias lapp1-cake="docker-compose exec -u $(id -u ${USER}):$(id -g ${USER}) lapone <cartella dell'applicazione>/bin/cake"
 
 ``` 
 ```
 alias dphp="docker-compose exec -u $(id -u ${USER}):$(id -g ${USER}) lapone php"
 alias dcomposer="docker-compose exec -u $(id -u ${USER}):$(id -g ${USER}) lapone composer"
-alias dcake="docker-compose exec -u $(id -u ${USER}):$(id -g ${USER}) lapone bin/cake"
+alias dcake="docker-compose exec -u $(id -u ${USER}):$(id -g ${USER}) lapone <cartella dell'applicazione>/bin/cake"
 
 ```
 
@@ -149,7 +149,7 @@ alias dcake="docker-compose exec -u $(id -u ${USER}):$(id -g ${USER}) lapone bin
 
 Creare un progetto cms
 ```
-docker-compose exec -T lapone composer create-project --prefer-dist cakephp/app:^3.8 <progetto> 
+docker-compose exec -T lapone composer create-project --prefer-dist cakephp/app:^4.3 <progetto> 
 ``` 
 
 nel sito 
